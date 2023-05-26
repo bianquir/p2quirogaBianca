@@ -4,24 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <title>Document</title>
 </head>
 <body>
-    <h1>Trabajo practico N° 3</h1>
-    <div id="contenedor">
-    <button id="consultar" onclick="getPerson()">Consultar</button>
+    <header>
+        <h1>Trabajo practico N° 3</h1>
+    </header>
+    <div class="row fila-main">
+    <section class="izquierda col-4" >
+        <div id="contenedor">
+            <img id="foto" class="mostrar-imagen" src="" alt="Foto de la persona">
+        </div>
+        <label for="nombre">Nombre</label>
+            <p id="nombre"></p>
+        <label for="apellido">Apellido</label>
+            <p id="apellido"></p>
+        <label for="nacimiento">Nacimiento</label>
+            <p id="fechaNacimiento"></p>
+        <label for="genero">Genero</label>
+            <p id="genero"></p>
+        <label for="latitud">Latitud</label>
+            <p id="latitud"></p>
+        <label for="longitud">Longitud</label>
+            <p id="longitud"></p>
+        <label for="localidad">Localidad</label>
+            <p id="localidad"></p>
 
-    <img id="foto" class="mostrar-imagen" src="" alt="Foto de la persona">
-    </div>
-    <h2 id="nombre"></h2>
-    <h2 id="apellido"></h2>
-    <h2 id="ciudad"></h2>
-    <h2 id="fechaNacimiento"></h2>
-    <h2 id="genero"></h2>
-    <h2 id="latitud"></h2>
-    <h2 id="longitud"></h2>
-    <h2 id="localidad"></h2>
+    </section>
+    <section class="centro col-3">
+        <div class="botones">
+            <button class="btn btn-outline-secondary"onclick="getCharacter(); getPerson()"><i class="bi bi-1-circle-fill"></i>CONSULTAR</button>
+            <button class="btn btn-outline-secondary"onclick="compareGenders()" ><i class="bi bi-2-circle-fill"></i>COMPARAR GENERO</button>
+        </div>
+        <div class="iconos">
+        <i id= "iconFalse" class="bi bi-x-circle-fill x-circle "></i>
+        <i id="iconTrue" class="bi bi-check-circle-fill check"></i>
+        </div>
+        <div id="map"></div>
+
+    </section>
+    <section class="derecha col-4">
+            <div class="img" id="imagen">
+                <img id="avatar">
+            </div>
+                <label for="name">Nombre</label>
+                    <p id="name"></p>
+                <label for="status">Estado</label>
+                    <p id="status"></p>
+                <label for="species">Especies</label>
+                    <p id="species"></p>
+                <label for="location">Localidad</label>
+                    <p id="location"></p>
+                <label for="gender">Genero</label>
+                    <p id="gender"></p>
+    </section>
+</div>
 </body>
 </html>
-<script src="logica.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="./js/logica.js"></script>

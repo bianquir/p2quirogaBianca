@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+  }
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+}
+
+label{
+    font-weight: 600;
+}
+
+
+.fila-main{
+    display: flex;
+    justify-content: space-evenly;
+    height: 85vh;
+    max-width: 100%;
+}
+
+.izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.derecha div img{
+    width: 125px;
+    height: 125px;
+    display: none;
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.centro .botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 200px;
+     
+}
+
+.centro .botones button i{
+    margin-right: 15px;
+}
+
+#iconFalse{
+    font-size: 50px;
+    color: rgb(235, 13, 13);
+    display: none;
+
+} 
+
+#iconTrue{
+    font-size: 50px;
+    color: rgb(7, 128, 7);
+    display: none;
+} 
+
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#foto {
+    display: none;
+    margin-top: 10px;
+}
+
+#map{
+    width: 100%;
+    height: 300px;
+    
+}
